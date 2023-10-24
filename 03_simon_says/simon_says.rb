@@ -29,11 +29,13 @@ def repeat(str, num=nil)
     string = ""
    str.split(" ").each_with_index do |word, index| 
     if index == 0
-        string += word[0].upcase + word[1, word.length-1]+" "
+      #   string += word[0].upcase + word[1, word.length-1]+" "
+      string +=word.capitalize+" "
     elsif word == "and" || word == "the" || word == "over"
          string+=word + " "
    else
-        string += word[0].upcase + word[1, word.length-1]+" "
+      #   string += word[0].upcase + word[1, word.length-1]+" "
+      string +=word.capitalize+" "
     end
    end
    return string.strip
